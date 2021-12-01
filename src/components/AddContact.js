@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 class AddContact extends React.Component {
   state = {
@@ -27,6 +28,9 @@ class AddContact extends React.Component {
     return (
       <div className="ui main">
         <h3 style={{ marginTop: "58px" }}>Adicionar Contato</h3>
+        <Link to={"/"}>
+                <button style={{marginTop: "-36px", float: "right"}} className="ui button blue">Voltar para lista de contatos</button>
+        </Link>
         <form className="ui form" onSubmit={this.add}>
           <div className="field">
             <label>Nome</label>
